@@ -47,6 +47,10 @@ local config = {
       spell = false, -- sets vim.opt.spell
       signcolumn = "auto", -- sets vim.opt.signcolumn to auto
       wrap = false, -- sets vim.opt.wrap
+      tabstop = 4,
+      shiftwidth = 4,
+      expandtab = true,
+      colorcolumn = { "81", "121" },
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
@@ -233,7 +237,7 @@ local config = {
       return config -- return final config table
     end,
     treesitter = { -- overrides `require("treesitter").setup(...)`
-      -- ensure_installed = { "lua" },
+      -- ensure_installed = { "lua", "python", "java", "clojure", "javascript" },
     },
     -- use mason-lspconfig to configure LSP installations
     ["mason-lspconfig"] = { -- overrides `require("mason-lspconfig").setup(...)`
