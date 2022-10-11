@@ -9,7 +9,7 @@ local config = {
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
-    channel = "nightly", -- "stable" or "nightly"
+    channel = "stable", -- "stable" or "nightly"
     version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
     branch = "main", -- branch name (NIGHTLY ONLY)
     commit = nil, -- commit hash (NIGHTLY ONLY)
@@ -68,18 +68,21 @@ local config = {
 
   -- Set dashboard header
   header = {
-    " █████  ███████ ████████ ██████   ██████",
-    "██   ██ ██         ██    ██   ██ ██    ██",
-    "███████ ███████    ██    ██████  ██    ██",
-    "██   ██      ██    ██    ██   ██ ██    ██",
-    "██   ██ ███████    ██    ██   ██  ██████",
-    " ",
-    "    ███    ██ ██    ██ ██ ███    ███",
-    "    ████   ██ ██    ██ ██ ████  ████",
-    "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-    "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-    "    ██   ████   ████   ██ ██      ██",
+      "",
   },
+  -- header = {
+  --   " █████  ███████ ████████ ██████   ██████",
+  --   "██   ██ ██         ██    ██   ██ ██    ██",
+  --   "███████ ███████    ██    ██████  ██    ██",
+  --   "██   ██      ██    ██    ██   ██ ██    ██",
+  --   "██   ██ ███████    ██    ██   ██  ██████",
+  --   " ",
+  --   "    ███    ██ ██    ██ ██ ███    ███",
+  --   "    ████   ██ ██    ██ ██ ████  ████",
+  --   "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
+  --   "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
+  --   "    ██   ████   ████   ██ ██      ██",
+  -- },
 
   -- Default theme configuration
   default_theme = {
@@ -191,7 +194,7 @@ local config = {
       ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
       -- quick save
-      -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+      ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
     t = {
       -- setting a mapping to false will disable it
@@ -277,7 +280,7 @@ local config = {
     },
   },
 
-  -- Modify which-key registration (Use this with mappings table in the above.)
+  -- Modify which-key registration (Use this with mappings table above.)
   ["which-key"] = {
     -- Add bindings which show up as group name
     register = {
