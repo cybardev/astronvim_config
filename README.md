@@ -4,6 +4,10 @@
 
 A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
+## 🎨 Customization
+
+Edit [`./lua/plugins/user.lua`](<./lua/plugins/user.lua> "~/.config/nvim/lua/plugins/user.lua") to change user configuration.
+
 ## 🛠️ Installation
 
 #### Make a backup of your current nvim and shared folder
