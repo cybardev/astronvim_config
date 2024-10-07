@@ -36,16 +36,14 @@ return {
     "AstroNvim/astroui",
     ---@type AstroUIOpts
     opts = {
-      colorscheme = "onedark_dark",
+      colorscheme = "onedark",
       highlights = {
         init = { -- this table overrides highlights in all themes
           -- Normal = { bg = "#000000" },
         },
         onedark = {
           CursorLine = { bg = BG_DARK },
-          CursorLineNr = { bg = "#2D2D2D", fg = "#EEEEEE" },
           LineNr = { bg = BG_DARK },
-          ColorColumn = { bg = BG_DARK },
         },
         onedark_dark = {
           CursorLine = { bg = BG_DARKER },
