@@ -8,6 +8,22 @@ local BG_DARKER = "#111111"
 
 ---@type LazySpec
 return {
+  -- <| disable unused plugins |> --
+  { "rcarriga/cmp-dap", enabled = false },
+  { "goolord/alpha-nvim", enabled = false },
+  { "rcarriga/nvim-dap-ui", enabled = false },
+  { "stevearc/aerial.nvim", enabled = false },
+  { "kevinhwang91/nvim-ufo", enabled = false },
+  { "mfussenegger/nvim-dap", enabled = false },
+  { "akinsho/toggleterm.nvim", enabled = false },
+  { "stevearc/resession.nvim", enabled = false },
+  { "s1n7ax/nvim-window-picker", enabled = false },
+  { "echasnovski/mini.bufremove", enabled = false },
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
+  { "max397574/better-escape.nvim", enabled = false },
+  { "mrjones2014/smart-splits.nvim", enabled = false },
+
+  -- <| configure plugins |> --
   {
     "AstroNvim/astrocommunity",
     { import = "astrocommunity.pack.lua" },
