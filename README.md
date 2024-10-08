@@ -32,3 +32,7 @@ git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
 ```shell
 nvim
 ```
+
+## 🎨 Customization
+
+Edit [`~/.config/nvim/lua/plugins/user.lua`](<./lua/plugins/user.lua> "~/.config/nvim/lua/plugins/user.lua") to change user configuration.
