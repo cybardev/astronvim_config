@@ -19,7 +19,7 @@ return {
   { "stevearc/resession.nvim", enabled = false },
   { "s1n7ax/nvim-window-picker", enabled = false },
   { "echasnovski/mini.bufremove", enabled = false },
-  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
+  -- { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   { "max397574/better-escape.nvim", enabled = false },
   { "mrjones2014/smart-splits.nvim", enabled = false },
 
