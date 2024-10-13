@@ -6,23 +6,32 @@
 local BG_DARK = "#202020"
 local BG_DARKER = "#111111"
 
----@type LazySpec
-return {
-  -- <| disable unused plugins |> --
-  { "rcarriga/cmp-dap", enabled = false },
-  { "goolord/alpha-nvim", enabled = false },
-  { "rcarriga/nvim-dap-ui", enabled = false },
-  { "stevearc/aerial.nvim", enabled = false },
-  { "kevinhwang91/nvim-ufo", enabled = false },
-  { "mfussenegger/nvim-dap", enabled = false },
-  { "akinsho/toggleterm.nvim", enabled = false },
-  { "stevearc/resession.nvim", enabled = false },
-  { "s1n7ax/nvim-window-picker", enabled = false },
-  { "echasnovski/mini.bufremove", enabled = false },
-  -- { "nvim-neo-tree/neo-tree.nvim", enabled = false },
-  { "max397574/better-escape.nvim", enabled = false },
-  { "mrjones2014/smart-splits.nvim", enabled = false },
+local DISABLED_PLUGINS = {
+  "rcarriga/cmp-dap",
+  "goolord/alpha-nvim",
+  "rcarriga/nvim-dap-ui",
+  "stevearc/aerial.nvim",
+  "kevinhwang91/nvim-ufo",
+  "mfussenegger/nvim-dap",
+  "akinsho/toggleterm.nvim",
+  "stevearc/resession.nvim",
+  "s1n7ax/nvim-window-picker",
+  "echasnovski/mini.bufremove",
+  -- "nvim-neo-tree/neo-tree.nvim",
+  "max397574/better-escape.nvim",
+  "mrjones2014/smart-splits.nvim",
+}
 
+local function disable_plugins(to_disable)
+  local plugins = {}
+  for i, plugin in pairs(to_disable) do
+    plugins[i] = { plugin, enabled = false }
+  end
+  return plugins
+end
+
+---@type LazySpec
+return vim.list_extend(disable_plugins(DISABLED_PLUGINS), {
   -- <| configure plugins |> --
   {
     "AstroNvim/astrocommunity",
@@ -68,4 +77,4 @@ return {
       },
     },
   },
-}
+})
