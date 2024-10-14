@@ -24,8 +24,8 @@ local DISABLED_PLUGINS = {
 
 local function disable_plugins(to_disable)
   local plugins = {}
-  for i, plugin in pairs(to_disable) do
-    plugins[i] = { plugin, enabled = false }
+  for _, plugin in pairs(to_disable) do
+    table.insert(plugins, { plugin, enabled = false })
   end
   return plugins
 end
