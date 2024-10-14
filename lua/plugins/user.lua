@@ -22,10 +22,9 @@ local DISABLED_PLUGINS = {
   "mrjones2014/smart-splits.nvim",
 }
 
-local function disable_plugins(to_disable)
-  local plugins = {}
-  for _, plugin in pairs(to_disable) do
-    table.insert(plugins, { plugin, enabled = false })
+local function disable_plugins(plugins)
+  for i, plugin in pairs(plugins) do
+    plugins[i] = { plugin, enabled = false }
   end
   return plugins
 end
